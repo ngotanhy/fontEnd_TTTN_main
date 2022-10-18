@@ -7,7 +7,14 @@ module.exports = {
     './node_modules/tw-elements/dist/js/**/*.js'
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'b-3' : '0 0 3px 3px rgba(0,0,0,0.1)',
+      },
+      spacing: {
+        't-113' : '113%' // top : 113 % 
+      }
+    },
   },
   plugins: [],
 }
