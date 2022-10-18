@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import CarouselHeader from '../components/Carousel/Carousel';
 import PageFooter from '../components/Footer/PageFooter';
-import HeaderPage from '../components/Header/HeaderPage';
+import HeaderPage from '../components/Header/headerPage';
 
 
 

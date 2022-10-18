@@ -23,7 +23,7 @@ export const history = createBrowserHistory({ window });
 
 import PageFooter from "./components/Footer/PageFooter";
 import Home from "./pages/Home/Home";
-import HomeTemplate from "./templates/HomeTemplate";
+import HomeTemplate from "./templates/homeTemplate";
 // import HomeTemplate from "./templates/HomeTemplate";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
