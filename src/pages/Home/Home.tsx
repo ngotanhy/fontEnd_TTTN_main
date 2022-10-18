@@ -1,11 +1,9 @@
-import React from "react";
-import { Pagination } from 'antd';
+import React from 'react'
 
+type Props = {}
 
-type Props = {};
-
-export const Home = (props: Props) => {
-  return <div>Home
-    <Pagination defaultCurrent={1} total={50} />;
-  </div>;
-};
+export default function Home({}: Props) {
+  return (
+    <div>Home</div>
+  )
+}
