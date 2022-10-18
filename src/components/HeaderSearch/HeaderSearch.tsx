@@ -5,7 +5,8 @@ import { MdLocationOn } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import cn from "classnames";
-import useScroll from "../../CustomHook/UseScroll";
+import useScroll from "../../Hooks/UseScroll";
+
 
 export default function HeaderSearch(props: any) {
   const { searchVisible, setSearchVisible } = props;

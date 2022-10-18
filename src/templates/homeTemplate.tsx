@@ -1,25 +1,16 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import CarouselHeader from '../components/Carousel/Carousel';
-import PageFooter from '../components/Footer/PageFooter';
-import HeaderPage from '../components/Header/headerPage';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import PageFooter from "../components/Footer/PageFooter";
+import HeaderPage from "../components/Header/HeaderPage";
 
-
-
-
-
-type Props = {}
+type Props = {};
 
 export default function HomeTemplate({}: Props) {
   return (
     <>
-    
-    <HeaderPage />
-    <CarouselHeader />
-    <Outlet />
-    <div>homeTemplate</div>
-    <PageFooter />
+      <HeaderPage />
+      <Outlet />
+      <PageFooter />
     </>
-
-  )
+  );
 }
