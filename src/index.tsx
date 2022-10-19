@@ -25,7 +25,7 @@ import PageFooter from "./components/Footer/PageFooter";
 import Home from "./pages/Home/Home";
 import HomeTemplate from "./templates/HomeTemplate";
 import Login from "./pages/Login/Login";
-import DetailRoom from "./pages/DetailRoom/DetailRoom";
+import DetailRoom from "./pages/DetailpPages/DetailPages";
 import DashBoard from "./pages/AdminPages/Dashboard/DashBoard";
 // import HomeTemplate from "./templates/HomeTemplate";
 
