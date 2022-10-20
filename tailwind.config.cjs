@@ -13,7 +13,11 @@ module.exports = {
       },
       spacing: {
         't-113' : '113%' // top : 113 % 
-      }
+      },
+      height: {
+         '29rem':'29rem',
+         '26rem':'26rem'
+      },
     },
   },
   plugins: [],
