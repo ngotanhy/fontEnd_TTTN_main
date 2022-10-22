@@ -4,6 +4,7 @@ import DetailImage from "./DetailImage/DetailImage";
 import DetailInfoRoom from "./DetailInfo/DetailInfo";
 import DetailTitle from "./DetailTitle/DetailTitle";
 
+
 type Props = {};
 
 export default function DetailPages({}: Props) {

@@ -1,7 +1,7 @@
 import React from "react";
 import { BsTranslate, BsHeart } from "react-icons/bs";
-import { AiFillStar } from "react-icons/Ai";
-import { TbMedal2 } from "react-icons/Tb";
+import { AiFillStar } from "react-icons/ai";
+import { TbMedal2 } from "react-icons/tb";
 import { FiShare } from "react-icons/fi";
 
 type Props = {};

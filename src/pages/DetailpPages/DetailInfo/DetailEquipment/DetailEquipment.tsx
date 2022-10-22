@@ -1,6 +1,10 @@
 import React from "react";
-import { AiFillCar, AiOutlineWifi } from "react-icons/Ai";
-import { TbCurrencyNaira, TbToolsKitchen2 } from "react-icons/Tb";
+import { AiFillCar, AiOutlineWifi } from "react-icons/ai";
+import { MdDryCleaning, MdOutlineYard } from "react-icons/md";
+import { TbCurrencyNaira, TbToolsKitchen2 } from "react-icons/tb";
+import {IoIosSnow } from "react-icons/io";
+import {SlScreenDesktop } from "react-icons/sl";
+import {GiBackpack } from "react-icons/gi";
 
 type Props = {};
 
@@ -19,15 +23,15 @@ export default function DetailEquipment({}: Props) {
             <p>Chỗ đỗ xe miễn phí tại nơi ở</p>
           </div>
           <div className="flex items-center  gap-2">
-            {/* <IoIosSnow /> */}
+            <IoIosSnow />
             <p>Máy điều hòa không khí gắn trên cửa sổ</p>
           </div>
           <div className="flex items-center gap-2">
-            {/* <MdOutlineYard /> */}
+            <MdOutlineYard />
             <p>Sân sau riêng</p>
           </div>
           <div className="flex items-center gap-2">
-            {/* <MdDryCleaning /> */}
+            <MdDryCleaning />
             <p>Máy sấy tóc</p>
           </div>
         </div>
@@ -37,19 +41,19 @@ export default function DetailEquipment({}: Props) {
             <p>Wi-fi</p>
           </div>
           <div className="flex items-center gap-2">
-            {/* <SlScreenDesktop /> */}
+            <SlScreenDesktop />
             <p>HDTV với Netflix</p>
           </div>
           <div className="flex items-center gap-2">
-            {/* <MdOutlineYard /> */}
+            <MdOutlineYard />
             <p>Sân hoặc ban công</p>
           </div>
           <div className="flex items-center gap-2">
-            {/* <GiBackpack /> */}
+            <GiBackpack />
             <p>Cho phép gửi hành lý</p>
           </div>
           <div className="flex items-center gap-2">
-            {/* <TbCurrencyNaira /> */}
+            <TbCurrencyNaira />
             <p className="line-through">Máy phát hiện khí CO</p>
           </div>
         </div>

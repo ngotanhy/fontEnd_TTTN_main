@@ -1,7 +1,7 @@
 import React from "react";
-import { GrKey } from "react-icons/Gr";
-import {CiParking1} from "react-icons/Ci"
-import {AiOutlineCalendar} from "react-icons/Ai"
+import { GrKey } from "react-icons/gr";
+import {CiParking1} from "react-icons/ci";
+import {AiOutlineCalendar} from "react-icons/ai";
 
 type Props = {};
 

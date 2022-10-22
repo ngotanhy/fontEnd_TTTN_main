@@ -1,69 +1,71 @@
-import * as React from "react";
-import DateRangePicker, {
-  OnSelectCallbackParam,
-  StateDefinitions,
-} from "react-daterange-picker";
-import Moment from "moment";
-import { extendMoment } from "moment-range";
+import React, { ReactNode, useState } from "react";
+import moment, { Moment } from "moment";
+import "react-dates/initialize";
+import "react-dates/lib/css/_datepicker.css";
+import { DayPickerRangeController, FocusedInputShape } from "react-dates";
 
-const moment:any = extendMoment(Moment);
+const DetailCalendar = () => {
+  const defaultFocusedInput = "startDate";
+  const [startDate, setStartDate] = useState<Moment | null>(moment());
+  const [endDate, setEndDate] = useState<Moment | null>(null);
+  const [focusedInput, setFocusedInput] = useState<FocusedInputShape | null>(
+    defaultFocusedInput
+  );
 
-const stateDefinitions: StateDefinitions = {
-  available:{
-    color : 'null',
-    label: "Available",
-  },
-  unavailable: {
-    selectable: false,
-    color: "#78818b",
-    label: "Unavailable",
-  },
-  fancy: {
-    color: "purple",
-    label: "Fancy",
-  },
-};
+  const handlEndDatesChange = (arg: {
+    startDate: Moment | null;
+    endDate: Moment | null;
+  }) => {
+    setStartDate(arg.startDate);
+    setEndDate(arg.endDate);
+  };
 
-const dateRanges = [
-  // {
-  //   state: "enquire",
-  //   range: moment.range(
-  //     moment().add(2, "weeks").subtract(5, "days"),
-  //     moment().add(2, "weeks").add(6, "days")
-  //   ),
-  // },
-  {
-    state: "fancy",
-    range: moment.range(moment().add(1, "days"), moment().add(3, "days")),
-  },
-  {
-    state: "unavailable",
-    range: moment.range(
-      moment().add(3, "weeks"),
-      moment().add(3, "weeks").add(5, "days")
-    ),
-  },
-];
+  const onFocusChange = (arg: FocusedInputShape | null) => {
+    setFocusedInput(arg);
+  };
 
-export const DetailCalendar: React.FC<{}> = () => {
-  const [value, setValue] = React.useState();
+  const renderDate = (date?: Moment | null) => {
+    return date ? moment(date).format("MM/DD/YY") : null;
+  };
 
-  const handleSelect=(value: OnSelectCallbackParam)=>{
-    setValue(moment.range(value.start, value.end));
-  }
+  const isDayBlocked = (day: Moment): boolean =>{
+    let mock = moment().add(6, 'days').startOf('day')
+    if(day.isSame(mock)) {
+        return true;
+    }
+    return false;
+}
 
+  const firstAvailableDay = moment().add(3, "days");
+  const isCurrentMonthExcludeAvailableDate =
+    moment().month() !== firstAvailableDay.month();
   return (
-    <DateRangePicker
-      firstOfWeek={1}
-      numberOfCalendars={2}
-      selectionType="range"
-      minimumDate={new Date()}
-      stateDefinitions={stateDefinitions}
-      dateStates={dateRanges}
-      defaultState="available"
-      showLegend={true}
-      value={value}
-      onSelect={handleSelect}
-    />
+    <>
+      <div className="mt-3">
+        <div className="font-medium text-xl">{Number(endDate) - Number(startDate)} đêm tại Koh Samui</div>
+        <div className="font-base mb-3">
+          {renderDate(startDate)} | {renderDate(endDate)}
+        </div>
+        <DayPickerRangeController
+          startDate={startDate}
+          endDate={endDate}
+          onDatesChange={handlEndDatesChange}
+          onFocusChange={onFocusChange}
+          numberOfMonths={2}
+          initialVisibleMonth={
+            isCurrentMonthExcludeAvailableDate
+              ? () => moment().add(1, "month")
+              : null
+          }
+          focusedInput={focusedInput || defaultFocusedInput}
+          // weekDayFormat={""}
+          monthFormat={`MMMM yyyy`}
+          // renderMonthElement={(item)=>{}}
+          isDayBlocked={isDayBlocked}
+        />
+      </div>
+    </>
   );
 };
+
+export default DetailCalendar;

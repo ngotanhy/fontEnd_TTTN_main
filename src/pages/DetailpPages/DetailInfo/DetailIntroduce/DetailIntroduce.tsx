@@ -1,5 +1,5 @@
 import React from "react";
-import { BsTranslate, BsHeart } from "react-icons/bs";
+import { BsTranslate } from "react-icons/bs";
 type Props = {};
 
 export default function DetailIntroduce({}: Props) {

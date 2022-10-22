@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 
 //Cấu hình redux
 import { Provider } from "react-redux";
+import App from "./App";
 import { store } from "./redux/configStore";
 
-import App from "./app";
 
 //pages
 

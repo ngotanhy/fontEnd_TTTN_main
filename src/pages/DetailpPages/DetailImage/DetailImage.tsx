@@ -1,5 +1,5 @@
 import React from "react";
-import { TiThSmall } from "react-icons/Ti";
+import { TiThSmall } from "react-icons/ti";
 // import overlayStyles from "";
 
 type Props = {
