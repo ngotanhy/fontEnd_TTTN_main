@@ -4,7 +4,7 @@ import { Button, Modal } from "antd";
 type Props = {
   arrImage: { img: string }[];
   open: boolean;
-  setOpen:any;
+  setOpen:(value: boolean) => void;
 };
 
 export default function DetailImageModal({ arrImage, open,setOpen }: Props) {
