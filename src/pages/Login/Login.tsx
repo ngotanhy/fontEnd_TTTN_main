@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { string, object } from "yup";
@@ -22,10 +22,15 @@ export default function Login({}: Props) {
   const navigate = useNavigate();
 
   const schema = object({
-
     email: string().required("Tài khoản không được để trống"),
     password: string().required("Mật khẩu không được để trống"),
   });
+
+  // useEffect(() => {
+  //   if (userLogin !== null) {
+  //     navigate("/");
+  //   }
+  // });
 
   const {
     register,
@@ -36,15 +41,28 @@ export default function Login({}: Props) {
     mode: "onTouched",
   });
   const onSubmit = handleSubmit((valuse) => {
-    
-    console.log(valuse)
+    console.log(valuse);
     const action = postSignin(valuse);
     dispatch(action);
-
   });
 
   return (
     <form onSubmit={onSubmit} className="cont">
+      <div
+        onClick={() => {
+          navigate("/");
+          window.location.reload();
+        }}
+        style={{
+          position: "absolute",
+          top: "20px",
+          left: "2%",
+          padding: "9px 12px",
+        }}
+        className="text-lg cursor-pointer transition-all hover:-translate-y-2 text-white font-medium rounded-full bg-primary"
+      >
+        Back to Home
+      </div>
       <div className="demo">
         <div className="login">
           <div className="login__check" />
@@ -81,9 +99,9 @@ export default function Login({}: Props) {
                 </p>
               )}
             </div>
-            <button type="submit" className="login__submit"
-             onClick={(e) => {e.preventDefault(); navigate("/")}
-            }
+            <button
+              type="submit"
+              className="login__submit" 
             >
               Sign in
             </button>
