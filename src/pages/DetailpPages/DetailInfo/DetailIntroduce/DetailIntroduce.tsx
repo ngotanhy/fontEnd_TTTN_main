@@ -8,7 +8,7 @@ export default function DetailIntroduce({}: Props) {
       <div className="flex items-center">
         <BsTranslate className="mr-2 text-xl" />
         <div className="text-base font-medium">
-          Một số thông tin đã được dịch tự động.
+          Một số thông tin.
         </div>
       </div>
       <div className="mb-3 mt-3">

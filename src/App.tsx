@@ -15,12 +15,11 @@ import "antd/dist/antd.css";
 //scss
 import "../src/assets/scss/style.scss";
 
-
 import Home from "./pages/Home/Home";
-import HomeTemplate from "./templates/HomeTemplate";
 import Login from "./pages/Login/Login";
 import DashBoard from "./pages/AdminPages/Dashboard/DashBoard";
 import DetailPages from "./pages/DetailpPages/DetailPages";
+import HomeTemplate from "./templates/HomeTemplate";
 
 type Props = {};
 

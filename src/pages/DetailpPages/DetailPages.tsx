@@ -1,8 +1,11 @@
 import React from "react";
 import BackToTop from "../../components/BackToTop/BackToTop";
 import DetailImage from "./DetailImage/DetailImage";
+import DetailImageModal from "./DetailImage/DetailImageModal/DetailImageModal";
 import DetailInfoRoom from "./DetailInfo/DetailInfo";
+import DetailReview from "./DetailReview/DetailReview";
 import DetailTitle from "./DetailTitle/DetailTitle";
+import DetailUser from "./DetaiUser/DetaiUser";
 
 
 type Props = {};
@@ -17,15 +20,18 @@ export default function DetailPages({}: Props) {
   ];
 
   return (
-    <>
-      <div className="mt-32">
-        <div className="container">
+    <div className="">
+      <div className="mt-32 ">
+        <div className="container ">
           <DetailTitle />
           <DetailImage arrImage={arrImage}/>
           <DetailInfoRoom/>
+          <DetailReview/>
+          {/* <DetailMap/> */}
+          <DetailUser/>
           <BackToTop/>
         </div>
       </div>
-    </>
+    </div>
   );
 }

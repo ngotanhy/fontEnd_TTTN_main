@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
 import classNames from "classnames";
-import HeaderMenu from "./HeaderMenu";
+// import HeaderMenu from "./HeaderMenu";
 import HeaderSearch from "../HeaderSearch/HeaderSearch";
+import HeaderMenu from "./headerMenu";
 
 type Props = {};
 

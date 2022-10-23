@@ -1,10 +1,8 @@
 import React from "react";
 import DetailBooking from "../DetailBooking/DetailBooking";
-import DetailInfoTitle from "./DetaiInfoTitle/DetailInfoTitle";
-import DetailCalendar from "./DetailCalendar/DetailCalendar";
+import DetailDescription from "./DetailDescription/DetailDescription";
 import DetailEquipment from "./DetailEquipment/DetailEquipment";
 import DetailInfoCover from "./DetailInfoCover/DetailInfoCover";
-import DetailInfoPreferential from "./DetailInfoPreferential/DetailInfoPreferential";
 import DetailIntroduce from "./DetailIntroduce/DetailIntroduce";
 import DetailSleepRoom from "./DetailSleepRoom/DetailSleepRoom";
 
@@ -14,13 +12,12 @@ export default function DetailInfoRoom({}: Props) {
   return (
     <div className="mt-8 relative">
       <div className="w-3/5">
-        {/* <DetailInfoTitle /> */}
-        <DetailInfoPreferential/>
+        <DetailDescription/>
         <DetailInfoCover/>
         <DetailIntroduce/>
         <DetailSleepRoom/>
         <DetailEquipment/>
-        <DetailCalendar/>
+        {/* <DetailCalendar/> */}
       </div>
       <div className="w-2/5 absolute right-0 top-0">
         <DetailBooking />
