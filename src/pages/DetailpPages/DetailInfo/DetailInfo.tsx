@@ -14,7 +14,7 @@ export default function DetailInfoRoom({}: Props) {
   return (
     <div className="mt-8 relative">
       <div className="w-3/5">
-        <DetailInfoTitle />
+        {/* <DetailInfoTitle /> */}
         <DetailInfoPreferential/>
         <DetailInfoCover/>
         <DetailIntroduce/>
