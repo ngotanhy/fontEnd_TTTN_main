@@ -1,9 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import PageFooter from "../components/Footer/PageFooter";
-import HeaderPage from "../components/Header/headerPage";
-// import HeaderPage from "../components/Header/HeaderPage";
-import DetailImageModal from "../pages/DetailpPages/DetailImage/DetailImageModal/DetailImageModal";
+import HeaderPage from "../components/Header/HeaderPage";
+import DetailImageModal from "../pages/DetailPages/DetailImage/DetailImageModal/DetailImageModal";
 
 type Props = {};
 

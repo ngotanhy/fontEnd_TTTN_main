@@ -1,13 +1,12 @@
 import React from "react";
-import { CarouselHeader } from "../../components/Carousel/Carousel";
-import DetailPages from "../DetailpPages/DetailPages";
+import  CarouselComponent  from "../../components/Carousel/CarouselComponent";
 
 type Props = {};
 
 export default function Home({}: Props) {
   return (
     <>
-      <CarouselHeader />
+      <CarouselComponent />
     </>
   );
 }

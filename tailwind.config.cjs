@@ -4,21 +4,24 @@ module.exports = {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     './src/**/*.{html,js}',
-    './node_modules/tw-elements/dist/js/**/*.js'
+    './node_modules/tw-elements/dist/js/**/*.js',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     extend: {
       boxShadow: {
-        'b-3' : '0 0 3px 3px rgba(0,0,0,0.1)',
+        'b-3': '0 0 3px 3px rgba(0,0,0,0.1)',
       },
       spacing: {
-        't-113' : '113%' // top : 113 % 
+        't-113': '113%' // top : 113 % 
       },
       height: {
-         '29rem':'29rem',
-         '26rem':'26rem'
+        '29rem': '29rem',
+        '26rem': '26rem'
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ]
 }
