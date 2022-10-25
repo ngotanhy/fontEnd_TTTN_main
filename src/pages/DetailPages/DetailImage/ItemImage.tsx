@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TiThSmall } from "react-icons/ti";
 import { useAppSelector, useAppDispatch } from "../../../Hooks/HooksRedux";
-import { modal } from "../../../redux/openModalReducer/OpenModalReducer";
+import { modal } from "../../../redux/reducers/openModalReducer/OpenModalReducer";
 
 type Props = {
   arrImage: { img: string }[];

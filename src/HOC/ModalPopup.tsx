@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Modal } from "antd";
 import { useAppDispatch, useAppSelector } from "../Hooks/HooksRedux";
-import { modalPopUp } from "../redux/openModalReducer/OpenModalReducer";
+import { modalPopUp } from "../redux/reducers/openModalReducer/OpenModalReducer";
 
-type Props = {
-};
+type Props = {};
 
 export default function ModalPopup({}: Props) {
-  const {ComponentContent,ComponentTitle, openModalPopup } = useAppSelector((state) => state.OpenModalReducer);
+  const { ComponentContent, ComponentTitle, openModalPopup } = useAppSelector(
+    (state) => state.OpenModalReducer
+  );
 
   const dispatch = useAppDispatch();
   // useEffect(()=>{
@@ -17,10 +18,10 @@ export default function ModalPopup({}: Props) {
     <div>
       <div>
         <Modal
-          title={<ComponentTitle/>}
+          title={<ComponentTitle />}
           visible={openModalPopup}
           width={1000}
-          style={{borderRadius:'100%'}}
+          style={{ borderRadius: "100%" }}
           onOk={() => {
             const action = modalPopUp(false);
             dispatch(action);
@@ -30,7 +31,7 @@ export default function ModalPopup({}: Props) {
             dispatch(action);
           }}
         >
-           <ComponentContent />
+          <ComponentContent />
         </Modal>
       </div>
     </div>

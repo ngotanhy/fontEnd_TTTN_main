@@ -5,7 +5,7 @@ import { FiShare } from "react-icons/fi";
 import { GrFormPrevious } from "react-icons/gr";
 
 import { useAppDispatch, useAppSelector } from "../../../../Hooks/HooksRedux";
-import { modal } from "../../../../redux/openModalReducer/OpenModalReducer";
+import { modal } from "../../../../redux/reducers/openModalReducer/OpenModalReducer";
 
 type Props = {};
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAppDispatch } from "../../../../Hooks/HooksRedux";
-import { modalPopUp } from "../../../../redux/openModalReducer/OpenModalReducer";
+import { modalPopUp } from "../../../../redux/reducers/openModalReducer/OpenModalReducer";
 import PopUpInfoCover from "./PopUpInfoCover";
 import PopUPTitle from "./PopUPTitle";
 
@@ -24,7 +24,7 @@ export default function DetailInfoCover({}: Props) {
           const action = modalPopUp({
             openModalPopup: true,
             ComponentContent: PopUpInfoCover,
-            ComponentTitle:PopUPTitle
+            ComponentTitle: PopUPTitle,
           });
           dispatch(action);
         }}

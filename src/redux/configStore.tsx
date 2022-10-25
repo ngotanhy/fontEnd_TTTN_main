@@ -1,12 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import OpenModalReducer from "./openModalReducer/OpenModalReducer";
-import RoomReducer from "./roomReducer/RoomReducer";
-
+import OpenModalReducer from "./reducers/openModalReducer/OpenModalReducer";
+import RoomReducer from "./reducers/roomReducer/RoomReducer";
 
 export const store = configureStore({
   reducer: {
-    OpenModalReducer:OpenModalReducer,
-    RoomReducer:RoomReducer,
+    OpenModalReducer: OpenModalReducer,
+    RoomReducer: RoomReducer,
   },
 });
 
