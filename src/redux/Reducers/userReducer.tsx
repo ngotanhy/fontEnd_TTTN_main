@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
-import { history } from "../../index";
+import { history } from "../../Index";
 import {
   ACCESS_TOKEN,
   getStoreJSON,
@@ -10,8 +10,8 @@ import {
   setStoreJSON,
   TOKEN_CYBERSOFT,
   USER_LOGIN,
-} from "../../utils/setting";
-import { AppDispatch } from "../configStore";
+} from "../../Utils/Setting";
+import { AppDispatch } from "../ConfigStore";
 
 
 interface userLogin {

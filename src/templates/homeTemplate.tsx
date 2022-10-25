@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import PageFooter from "../components/Footer/PageFooter";
-import HeaderPage from "../components/Header/HeaderPage";
+import PageFooter from "../Components/Footer/PageFooter";
+import HeaderPage from "../Components/Header/HeaderPage";
 
 type Props = {};
 

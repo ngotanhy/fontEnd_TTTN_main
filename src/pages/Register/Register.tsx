@@ -10,8 +10,8 @@ import classnames from "classnames";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import dayjs from "dayjs";
 import classNames from "classnames";
-import { AppDispatch } from "../../redux/configStore";
-import { postSignupUser } from "../../redux/Reducers/userReducer";
+import { AppDispatch } from "../../Redux/ConfigStore";
+import { postSignupUser } from "../../Redux/Reducers/UserReducer";
 
 
 
@@ -227,19 +227,6 @@ export default function Register({}: Props) {
                   </p>
                 )}
               </div>
-              {/* <div className="h-24">
-                <input
-                  type="text"
-                  {...register("address")}
-                  className=" block border border-grey-light w-full p-3 rounded mb-0"
-                  placeholder="Address"
-                />
-                {errors.address && (
-                  <p className="m-0 text-red-500 text-md italic text-left mt-2">
-                    {errors.address.message}
-                  </p>
-                )}
-              </div> */}
             </div>
           </div>
 

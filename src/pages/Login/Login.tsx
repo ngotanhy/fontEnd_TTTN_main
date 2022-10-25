@@ -6,9 +6,9 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 // import './Login.scss'
 // import { postDangNhap } from '../../Slices/userAuthSlice';
-import { AppDispatch } from "../../redux/configStore";
-import { postSignin } from "../../redux/Reducers/userReducer";
-import { http, TOKEN_CYBERSOFT } from "../../utils/setting";
+import { AppDispatch } from "../../Redux/ConfigStore";
+import { postSignin } from "../../Redux/Reducers/UserReducer";
+import { http, TOKEN_CYBERSOFT } from "../../Utils/Setting";
 
 interface Login {
   email: string;

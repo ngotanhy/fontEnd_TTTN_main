@@ -4,7 +4,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 //Cấu hình redux
 import { Provider } from "react-redux";
-import { store } from "./redux/configStore";
+import { store } from "./Redux/ConfigStore";
 
 //cai history npm install --save history
 import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
@@ -25,15 +25,15 @@ export const history = createBrowserHistory({ window });
 
 //pages
 
-import PageFooter from "./components/Footer/PageFooter";
-import Home from "./pages/Home/Home";
-import HomeTemplate from "./templates/HomeTemplate";
-import Login from "./pages/Login/Login";
-import DetailRoom from "./pages/DetailRoom/DetailRoom";
-import DashBoard from "./pages/AdminPages/Dashboard/DashBoard";
-import Register from "./pages/Register/Register";
-import QuanLiNguoiDung from "./pages/AdminPages/TestPage/TestPage";
-import RoomManagement from "./pages/AdminPages/TestPage/RoomManage";
+import PageFooter from "./Components/Footer/PageFooter";
+import Home from "./Pages/Home/Home";
+import HomeTemplate from "./Templates/HomeTemplate";
+import Login from "./Pages/Login/Login";
+import DetailRoom from "./Pages/DetailRoom/DetailRoom";
+import DashBoard from "./Pages/AdminPages/Dashboard/DashBoard";
+import Register from "./Pages/Register/Register";
+import QuanLiNguoiDung from "./Pages/AdminPages/TestPage/TestPage";
+import RoomManagement from "./Pages/AdminPages/TestPage/RoomManage";
 // import HomeTemplate from "./templates/HomeTemplate";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

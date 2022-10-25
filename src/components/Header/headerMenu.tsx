@@ -12,9 +12,9 @@ import {
   TOKEN_CYBERSOFT,
   USER_LOGIN,
   clearLocalStorage
-} from "../../utils/setting";
-import { AppDispatch, RootState } from "../../redux/configStore";
-import userReducer, { userLoginState } from "../../redux/Reducers/userReducer";
+} from "../../Utils/Setting";
+import { AppDispatch, RootState } from "../../Redux/ConfigStore";
+import userReducer, { userLoginState } from "../../Redux/Reducers/UserReducer";
 import { isNull } from "lodash";
 
 

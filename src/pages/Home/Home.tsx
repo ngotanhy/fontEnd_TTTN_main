@@ -1,6 +1,6 @@
 import React from "react";
-import { CarouselHeader } from "../../components/Carousel/Carousel";
-import CarouselSlick from "../../components/Carousel/CarouselSlick";
+import { CarouselHeader } from "../../Components/Carousel/Carousel";
+import CarouselSlick from "../../Components/Carousel/CarouselSlick";
 
 
 type Props = {};

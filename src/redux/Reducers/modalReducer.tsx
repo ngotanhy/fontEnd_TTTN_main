@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // import { type } from "@testing-library/user-event/dist/type";
-import { RootState } from "../configStore";
+import { RootState } from "../ConfigStore";
 
 const ComponentDefault = (props: any) => {
   return <div>default Value</div>;
