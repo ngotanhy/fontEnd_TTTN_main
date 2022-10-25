@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaSearch, FaFacebookF } from "react-icons/fa";
-import {
-  AiOutlineCopyright,
-  AiOutlineGlobal,
-  AiOutlineTwitter,
-} from "react-icons/ai";
+import { FaSearch } from "react-icons/fa";
+import { AiOutlineGlobal } from "react-icons/ai";
 import classNames from "classnames";
-import HeaderMenu from "./HeaderMenu";
 import HeaderSearch from "../HeaderSearch/HeaderSearch";
 import { useSelector } from "react-redux";
+import HeaderMenu from "./HeaderMenu";
 
 type Props = {}
 

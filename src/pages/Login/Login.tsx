@@ -4,11 +4,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { string, object } from "yup";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { postSignin } from "../../redux/Reducers/userReducer";
+import { AppDispatch } from "../../redux/configStore";
+
 // import './Login.scss'
 // import { postDangNhap } from '../../Slices/userAuthSlice';
-import { AppDispatch } from "../../Redux/ConfigStore";
-import { postSignin } from "../../Redux/Reducers/UserReducer";
-import { http, TOKEN_CYBERSOFT } from "../../Utils/Setting";
 
 interface Login {
   email: string;

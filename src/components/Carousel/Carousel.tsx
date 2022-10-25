@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Carousel } from 'antd';
-import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md"
-import { Button } from 'antd';
+
 
 
 

@@ -1,15 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
-import modalReducer from "./Reducers/ModalReducer";
-import userReducer from "./Reducers/UserReducer";
-import userAdminReducer from "./Reducers/UserAdminReducer";
-import roomReducer from "./Reducers/RoomReducer";
+import modalReducer from "./Reducers/modalReducer";
+import userReducer from "./Reducers/userReducer";
+import userAdminReducer from "./Reducers/userAdminReducer";
+import roomReducer from "./Reducers/roomReducer";
+import openModalReducer from "./Reducers/openModalReducer";
+
 
 export const store = configureStore({
   reducer: {
     userReducer: userReducer,
     modalReducer: modalReducer,
     userAdminReducer: userAdminReducer,
-    roomReducer: roomReducer
+    roomReducer: roomReducer,
+    openModalReducer: openModalReducer,
   },
 });
 

@@ -1,16 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { history } from "../../Index";
+import { AppDispatch } from "../configStore";
+
 import {
-  ACCESS_TOKEN,
   getStoreJSON,
   http,
-  setStore,
-  setStoreJSON,
-  TOKEN_CYBERSOFT,
   USER_LOGIN,
-} from "../../Utils/Setting";
-import { AppDispatch } from "../ConfigStore";
-// import { nguoiDungModel } from "../models/nguoiDungModel";
+} from "../../utils/setting";
 
 export interface userAll {
   name: string;
@@ -47,6 +42,9 @@ export const { logOutUserAction, getAllUserAction } = userAdminReducer.actions;
 
 export default userAdminReducer.reducer;
 
+
+
+
 //-------action api------------
 
 export const getUserApi = () => {
@@ -56,7 +54,6 @@ export const getUserApi = () => {
       let arrUser: userAll[] = result.data.content;
       const action = getAllUserAction(arrUser);
       console.log(result);
-
       dispatch(action);
       console.log(action);
     } catch (err) {

@@ -1,44 +1,38 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { history } from "../../Index";
-import {
-  ACCESS_TOKEN,
-  getStoreJSON,
-  http,
-  setStore,
-  setStoreJSON,
-  TOKEN_CYBERSOFT,
-  USER_LOGIN,
-} from "../../Utils/Setting";
-import { AppDispatch } from "../ConfigStore";
+import { AppDispatch } from "../configStore";
+
+import { http } from "../../utils/setting";
 
 export interface roomList {
-    id: number,
-    tenPhong: string,
-    khach: number,
-    phongNgu: number,
-    giuong: number,
-    phongTam: number,
-    moTa: string,
-    giaTien: number,
-    mayGiat: boolean,
-    banLa: boolean,
-    tivi: boolean,
-    dieuHoa: boolean,
-    wifi: boolean,
-    bep: boolean,
-    doXe: boolean,
-    hoBoi: boolean,
-    banUi: boolean,
-    maViTri: number,
-    hinhAnh: string
+  id: number;
+  tenPhong: string;
+  khach: number;
+  phongNgu: number;
+  giuong: number;
+  phongTam: number;
+  moTa: string;
+  giaTien: number;
+  mayGiat: boolean;
+  banLa: boolean;
+  tivi: boolean;
+  dieuHoa: boolean;
+  wifi: boolean;
+  bep: boolean;
+  doXe: boolean;
+  hoBoi: boolean;
+  banUi: boolean;
+  maViTri: number;
+  hinhAnh: string;
 }
 
 export interface roomListItem {
-    roomArray: roomList[]
+  roomArray: roomList[];
+  roomDetail: roomList[];
 }
 
 const initialState: roomListItem = {
   roomArray: [],
+  roomDetail: [],
 };
 
 const roomReducer = createSlice({
@@ -48,13 +42,14 @@ const roomReducer = createSlice({
     getAllRoom: (state: roomListItem, action: PayloadAction<roomList[]>) => {
       state.roomArray = action.payload;
     },
-    createNewRoom: (state: roomListItem, action: PayloadAction<roomList>) => {
-
-    }
+    createNewRoom: (state: roomListItem, action: PayloadAction<roomList>) => {},
+    getDetailRoom: (state: roomListItem, action: PayloadAction<roomList[]>) => {
+      state.roomDetail = action.payload;
+    },
   },
 });
 
-export const { getAllRoom, createNewRoom } = roomReducer.actions;
+export const { getAllRoom, createNewRoom ,getDetailRoom} = roomReducer.actions;
 
 export default roomReducer.reducer;
 
@@ -68,24 +63,22 @@ export const getRoomApi = () => {
       const action = getAllRoom(roomArray);
       console.log(result);
       dispatch(action);
-      console.log(action);
     } catch (err) {
       console.log(err);
     }
   };
 };
 
-// export const getDetailRoom = () => {
-//   return async (dispatch: AppDispatch) => {
-//     try {
-//       const result = await http.get("/phong-thue");
-//       let roomArray: roomList[] = result.data.content;
-//       const action = getAllRoom(roomArray);
-//       console.log(result);
-//       dispatch(action);
-//       console.log(action);
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
-// };
+export const getDetailRoomId = (id: any) => {
+  return async (dispatch: AppDispatch) => {
+    try {
+      const result = await http.get(`/phong-thue/${id}`);
+      let roomArray: roomList[] = result.data.content;
+      const action = getDetailRoom(roomArray);
+      console.log(result);
+      dispatch(action);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
