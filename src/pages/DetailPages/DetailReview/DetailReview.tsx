@@ -1,10 +1,15 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { GrFormNext } from "react-icons/gr";
+import { useAppDispatch } from "../../../Hooks/HooksRedux";
+import { modalPopUp } from "../../../redux/openModalReducer/OpenModalReducer";
+import PopupReview from "./PopupReview";
+import PopUpTitle from "./PopUpTitle";
 
 type Props = {};
 
 export default function DetailReview({}: Props) {
+  const dispatch = useAppDispatch();
   return (
     <div className="border-b border-slate-400 pb-5">
       <div className="flex items-center gap-2 font-semibold text-2xl mt-5">
@@ -49,10 +54,22 @@ export default function DetailReview({}: Props) {
           </p>
         </div>
       </div>
-      <button className="underline underline-offset-1 font-medium text-xl flex items-center mb-5">
+      <button
+        className="underline underline-offset-1 font-medium text-xl flex items-center mb-5"
+        onClick={() => {
+          dispatch(
+            modalPopUp({
+              ComponentContent: PopupReview,
+              openModalPopup: true,
+              ComponentTitle: PopUpTitle,
+            })
+          );
+        }}
+      >
         Hiện thị thêm
         <GrFormNext />
       </button>
+      {/* <ModalPopup Component={PopupReview} title={''}/> */}
     </div>
   );
 }

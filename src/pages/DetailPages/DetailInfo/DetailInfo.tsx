@@ -10,7 +10,7 @@ type Props = {};
 
 export default function DetailInfoRoom({}: Props) {
   return (
-    <div className="mt-8 relative">
+    <div className="mt-8 flex gap-24">
       <div className="w-3/5">
         <DetailDescription/>
         <DetailInfoCover/>
@@ -19,7 +19,7 @@ export default function DetailInfoRoom({}: Props) {
         <DetailEquipment/>
         {/* <DetailCalendar/> */}
       </div>
-      <div className="w-2/5 absolute right-0 top-0">
+      <div className="w-2/5 relative right-0 top-0 ">
         <DetailBooking />
       </div>
     </div>

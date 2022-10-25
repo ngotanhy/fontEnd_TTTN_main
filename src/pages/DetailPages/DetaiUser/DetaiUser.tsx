@@ -7,7 +7,7 @@ type Props = {};
 export default function DetailUser({}: Props) {
   return (
     <div>
-      <div className="mt-8">
+      <div className="mt-8 mb-8">
         <div className="flex gap-4 items-center mb-2">
           <img
             src="https://i.pravatar.cc/300"

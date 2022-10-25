@@ -19,6 +19,12 @@ module.exports = {
         '29rem': '29rem',
         '26rem': '26rem'
       },
+      width: {
+        '29rem': '29rem',
+        '26rem': '26rem',
+        "30rem":'30rem',
+        '475px':'475px',
+      },
     },
   },
   plugins: [
