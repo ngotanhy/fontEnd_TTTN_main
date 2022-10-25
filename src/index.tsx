@@ -32,6 +32,8 @@ import Login from "./pages/Login/Login";
 import DetailRoom from "./pages/DetailRoom/DetailRoom";
 import DashBoard from "./pages/AdminPages/Dashboard/DashBoard";
 import Register from "./pages/Register/Register";
+import QuanLiNguoiDung from "./pages/AdminPages/TestPage/TestPage";
+import RoomManagement from "./pages/AdminPages/TestPage/RoomManage";
 // import HomeTemplate from "./templates/HomeTemplate";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
@@ -52,6 +54,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+
+            {/* Testing page admin  */}
+            <Route path="/quanly" element={<QuanLiNguoiDung />} />
+            <Route path="/roomAdmin" element={<RoomManagement />} />
           <Route path="/admin/dashboard" element={<DashBoard />}></Route>
         </Routes>
       </HistoryRouter>
