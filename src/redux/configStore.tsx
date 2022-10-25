@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import OpenModalReducer from "./openModalReducer/OpenModalReducer";
 import RoomReducer from "./roomReducer/RoomReducer";
-// import userReducer from "./reducers/userReducer";
+
 
 export const store = configureStore({
   reducer: {

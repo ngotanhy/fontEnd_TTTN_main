@@ -33,7 +33,7 @@ export default function DetailPages({}: Props) {
   return (
     <div className="">
       <HeaderDetail />
-      <div className="mt-32 ">
+      <div className="mt-4">
         <div className="container ">
           <DetailTitle />
           <DetailImage arrImage={arrImage} />
