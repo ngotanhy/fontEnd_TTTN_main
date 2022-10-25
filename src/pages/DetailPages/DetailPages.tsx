@@ -7,6 +7,7 @@ import DetailInfoRoom from "./DetailInfo/DetailInfo";
 import DetailReview from "./DetailReview/DetailReview";
 import DetailTitle from "./DetailTitle/DetailTitle";
 import DetailUser from "./DetaiUser/DetaiUser";
+import HeaderDetail from "./HeaderDetail/HeaderDetail";
 
 type Props = {};
 
@@ -31,6 +32,7 @@ export default function DetailPages({}: Props) {
 
   return (
     <div className="">
+      <HeaderDetail />
       <div className="mt-32 ">
         <div className="container ">
           <DetailTitle />
@@ -39,8 +41,7 @@ export default function DetailPages({}: Props) {
           <DetailReview />
           {/* <DetailMap/> */}
           <DetailUser />
-          <ModalPopup  />
-
+          <ModalPopup />
           <BackToTop />
         </div>
       </div>
