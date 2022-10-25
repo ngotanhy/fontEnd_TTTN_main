@@ -15,12 +15,9 @@ export default function DetailImageModal({}: Props) {
   const { arrImage } = useAppSelector((state) => state.RoomReducer);
   return (
     <div
-      className={`absolute left-0 w-full bg-slate-50 animate__animated ${
-        openModal
-          ? "opacity-1 z-10 "
-          : "opacity-0 -z-10 h-0 hidden  animate__backOutDown"
-      }`}
-      style={{ top: "-128px" }}
+      className={`absolute left-0 w-full bg-slate-50 
+      ${openModal ? "opacity-1 z-30 " : "opacity-0 -z-10 h-0 hidden "}`}
+      style={{ top: "-114px" }}
     >
       <div className="container relative">
         <div className=" fixed container p-6 bg-slate-50">
@@ -30,7 +27,7 @@ export default function DetailImageModal({}: Props) {
               onClick={() => {
                 const action = modal(false);
                 dispatch(action);
-                window.scroll(0,0);
+                window.scroll(0, 0);
               }}
             >
               <GrFormPrevious />

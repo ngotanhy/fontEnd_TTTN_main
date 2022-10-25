@@ -1,13 +1,11 @@
 import React from "react";
+import { useAppSelector } from "../../../Hooks/HooksRedux";
 
 import ItemImage from "./ItemImage";
 
-
-type Props = {
-  arrImage: { img: string }[];
-};
-
-export default function DetailImage({ arrImage }: Props) {
+type Props = {};
+export default function DetailImage({}: Props) {
+  const { arrImage } = useAppSelector((state) => state.RoomReducer);
   return (
     <>
       <div className="mt-6">
