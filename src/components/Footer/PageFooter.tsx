@@ -6,7 +6,7 @@ const { Footer } = Layout;
 
 export default function PageFooter() {
   return (
-    <div className="mt-40" id="pageFooter">
+    <div className="mt-40 " id="pageFooter">
       <Footer className=" text-center">
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col className="gutter-row" span={6}>
@@ -129,7 +129,7 @@ export default function PageFooter() {
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col className="gutter-row" span={12}>
             <div className="text-left">
-              <ul className="w-100 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+              <ul className="w-100 text-sm font-medium text-gray-900 bg-white rounded-lg dark:bg-gray-700 dark:text-white">
                 <li className="list-none mr-6 float-left">
                   @2021 Airbnb, Inc. All rights reserved
                 </li>
@@ -144,20 +144,20 @@ export default function PageFooter() {
           </Col>
           <Col className="gutter-row" span={6}>
             <div className="text-left">
-              <ul className="w-50 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white list-none ">
-                <li className="mr-6 ml-4 float-left">
+              <ul className="w-50 text-sm font-medium text-gray-900 bg-white rounded-lg dark:bg-gray-700 dark:text-white list-none ">
+                <li className="mr-6 ml-4 float-left ">
                   <NavLink to="/">
-                    <i className="fa-brands fa-facebook-f "></i>
+                    <i className="fa-brands fa-facebook-f text-xl"></i>
                   </NavLink>
                 </li>
                 <li className="mr-6 ml-4 float-left">
                   <NavLink  to="/">
-                    <i className="fa-brands fa-twitter "></i>
+                    <i className="fa-brands fa-twitter text-xl"></i>
                   </NavLink>
                 </li>
-                <li className="mr-6 ml-4 float-left">
+                <li className="mr-6 ml-4 float-left ">
                   <NavLink to="/">
-                    <i className="fa-brands fa-instagram  "></i>
+                    <i className="fa-brands fa-instagram  text-xl"></i>
                   </NavLink>
                 </li>
               </ul>
