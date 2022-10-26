@@ -19,7 +19,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import DashBoard from "./pages/AdminPages/Dashboard/DashBoard";
 import DetailPages from "./pages/DetailPages/DetailPages";
-import HomeTemplate from "./templates/HomeTemplate";
+import HomeTemplate from "./templates/homeTemplate";
 
 type Props = {};
 

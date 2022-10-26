@@ -5,7 +5,7 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import classNames from "classnames";
 // import HeaderMenu from "./HeaderMenu";
 import HeaderSearch from "../HeaderSearch/HeaderSearch";
-import HeaderMenu from "./HeaderMenu";
+import HeaderMenu from "./headerMenu";
 
 type Props = {};
 
