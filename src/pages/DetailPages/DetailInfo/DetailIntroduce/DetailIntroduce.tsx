@@ -1,7 +1,7 @@
 import React from "react";
 import { BsTranslate } from "react-icons/bs";
 import { useAppDispatch } from "../../../../Hooks/HooksRedux";
-import { modalPopUp } from "../../../../redux/openModalReducer/OpenModalReducer";
+import { modalPopUp } from "../../../../redux/Reducers/openModalReducer";
 import PopUpIntroduce from "./PopUpIntroduce";
 import PopUpTitle from "./PopUpTitle";
 type Props = {};

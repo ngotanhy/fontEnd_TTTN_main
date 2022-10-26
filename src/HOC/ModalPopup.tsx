@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Modal } from "antd";
 import { useAppDispatch, useAppSelector } from "../Hooks/HooksRedux";
-import { modalPopUp } from "../redux/openModalReducer/OpenModalReducer";
+import { modalPopUp } from "../Redux/Reducers/openModalReducer";
 
 type Props = {
 };
 
 export default function ModalPopup({}: Props) {
-  const {ComponentContent,ComponentTitle, openModalPopup } = useAppSelector((state) => state.OpenModalReducer);
+  const {ComponentContent,ComponentTitle, openModalPopup } = useAppSelector((state) => state.openModalReducer);
 
   const dispatch = useAppDispatch();
   // useEffect(()=>{

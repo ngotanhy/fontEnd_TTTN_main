@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../configStore";
 
 const defaultComponent = () => {
   return (
@@ -14,8 +13,8 @@ const initialState = {
   ComponentContent:defaultComponent,
 };
 
-const OpenModalReducer = createSlice({
-  name: "OpenModalReducer",
+const openModalReducer = createSlice({
+  name: "openModalReducer",
   initialState,
   reducers: {
     modal: (state, action: PayloadAction<boolean>) => {
@@ -30,7 +29,7 @@ const OpenModalReducer = createSlice({
   },
 });
 
-export const { modal, modalPopUp } = OpenModalReducer.actions;
+export const { modal, modalPopUp } = openModalReducer.actions;
 
-export default OpenModalReducer.reducer;
+export default openModalReducer.reducer;
 

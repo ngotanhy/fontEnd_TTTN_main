@@ -3,7 +3,7 @@ import { Tabs } from "antd";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import cn from "classnames";
+import classnames from "classnames";
 import useScroll from "../../Hooks/UseScroll";
 
 
@@ -56,7 +56,7 @@ export default function HeaderSearch(props: any) {
     <div>
       <div
         onClick={setSearchVisible}
-        className={cn(
+        className={classnames(
           "headerSearch absolute z-10 animate__animated animate__bounceInDown transition-all duration-300 ",
           {
             hidden: !searchVisible,
@@ -88,7 +88,7 @@ export default function HeaderSearch(props: any) {
                 border: "1px solid #ccc",
                 boxShadow: "0 2px 2px 2px rgba(0,0,0,0.2)",
               }}
-              className={cn(
+              className={classnames(
                 "rounded-2xl  absolute z-10 overflow-y-scroll animate__fadeInDownBig animate__animated w-11/12 lg:w-6/12 ",
                 {
                   hidden: !positionVisible,

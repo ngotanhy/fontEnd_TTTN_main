@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAppDispatch } from "../../../../Hooks/HooksRedux";
-import { modalPopUp } from "../../../../redux/openModalReducer/OpenModalReducer";
+import { modalPopUp } from "../../../../redux/Reducers/openModalReducer";
 import PopUpInfoCover from "./PopUpInfoCover";
 import PopUPTitle from "./PopUPTitle";
 

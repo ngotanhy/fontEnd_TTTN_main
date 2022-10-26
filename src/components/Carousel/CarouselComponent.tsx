@@ -28,8 +28,8 @@ export default function CarouselComponent({}: Props) {
   return (
     <div className="relative mt-20">
       <button
-        className="absolute left-0 z-10 font-medium text-3xl"
-        style={{ top: "50%", transform: "translateY(-50%)" }}
+        className="absolute left-0 font-medium text-3xl"
+        style={{ top: "50%", transform: "translateY(-50%)",zIndex:'2' }}
         onClick={() => slider.current?.prev()}
       >
         <FcPrevious/>

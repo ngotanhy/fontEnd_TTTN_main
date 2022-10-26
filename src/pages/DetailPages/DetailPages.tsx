@@ -1,46 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import BackToTop from "../../components/BackToTop/BackToTop";
 import ModalPopup from "../../HOC/ModalPopup";
+import { useAppDispatch } from "../../Hooks/HooksRedux";
+import { getDetailRoomId } from "../../redux/Reducers/roomReducer";
 import DetailImage from "./DetailImage/DetailImage";
-import DetailImageModal from "./DetailImage/DetailImageModal/DetailImageModal";
 import DetailInfoRoom from "./DetailInfo/DetailInfo";
 import DetailReview from "./DetailReview/DetailReview";
 import DetailTitle from "./DetailTitle/DetailTitle";
 import DetailUser from "./DetaiUser/DetaiUser";
+import HeaderDetail from "./HeaderDetail/HeaderDetail";
 
 type Props = {};
 
+type QuizParams = {
+  id: string;
+};
 export default function DetailPages({}: Props) {
-  const arrImage: { img: string }[] = [
-    {
-      img: "https://a0.muscache.com/im/pictures/d0e3bb05-a96a-45cf-af92-980269168096.jpg?im_w=720",
-    },
-    {
-      img: "https://a0.muscache.com/im/pictures/d0e3bb05-a96a-45cf-af92-980269168096.jpg?im_w=720",
-    },
-    {
-      img: "https://a0.muscache.com/im/pictures/d0e3bb05-a96a-45cf-af92-980269168096.jpg?im_w=720",
-    },
-    {
-      img: "https://a0.muscache.com/im/pictures/d0e3bb05-a96a-45cf-af92-980269168096.jpg?im_w=720",
-    },
-    {
-      img: "https://a0.muscache.com/im/pictures/c2120b84-291d-4738-a911-97672d2ab3f2.jpg?im_w=720",
-    },
-  ];
+  const { id } = useParams<QuizParams>();
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    const action = getDetailRoomId(id);
+    dispatch(action);
+  }, []);
 
   return (
-    <div className="">
-      <div className="mt-32 ">
+    <div className="relative">
+      <HeaderDetail />
+      <div className="mt-28">
         <div className="container ">
           <DetailTitle />
-          <DetailImage arrImage={arrImage} />
+          <DetailImage />
           <DetailInfoRoom />
           <DetailReview />
           {/* <DetailMap/> */}
           <DetailUser />
-          <ModalPopup  />
-
+          <ModalPopup />
           <BackToTop />
         </div>
       </div>
