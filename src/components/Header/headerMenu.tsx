@@ -8,17 +8,6 @@ import { AppDispatch, RootState } from "../../redux/configStore";
 
 type Props = {};
 
-// interface user {
-//   user: string;
-//   id?: number;
-//   name?: string;
-//   email?: string;
-//   password?: string;
-//   phone?: string;
-//   birthday?: string;
-//   gender?: boolean;
-//   role?: string;
-// }
 
 export default function HeaderMenu({}: Props) {
   const dispatch = useDispatch<AppDispatch>();
