@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { TiThSmall } from "react-icons/ti";
-import {  useAppDispatch } from "../../../Hooks/HooksRedux";
-import { modal } from "../../../redux/Reducers/openModalReducer";
-import { roomList } from "../../../redux/Reducers/roomReducer";
+import { useAppSelector, useAppDispatch } from "../../../Hooks/HooksRedux";
+import { modal } from "../../../redux/openModalReducer/OpenModalReducer";
 
 type Props = {
-  arrImage: roomList[],
-  index: number
+  arrImage: { img: string }[];
+  index: number;
 };
 
 export default function ItemImage({ arrImage, index }: Props) {
+  // const {open} =useAppSelector(state => state.OpenModalReducer)
   const dispatch = useAppDispatch();
   return (
     <>
@@ -21,7 +21,7 @@ export default function ItemImage({ arrImage, index }: Props) {
             dispatch(action);
           }}
           style={{
-            backgroundImage: `url(${arrImage[0]?.hinhAnh})`,
+            backgroundImage: `url(${arrImage[4].img})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -46,7 +46,7 @@ export default function ItemImage({ arrImage, index }: Props) {
             dispatch(action);
           }}
           style={{
-            backgroundImage: `url(${arrImage[0]?.hinhAnh})`,
+            backgroundImage: `url(${arrImage[0].img})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

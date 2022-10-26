@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { GrFormNext } from "react-icons/gr";
 import { useAppDispatch } from "../../../Hooks/HooksRedux";
-import { modalPopUp } from "../../../redux/Reducers/openModalReducer";
+import { modalPopUp } from "../../../redux/openModalReducer/OpenModalReducer";
 import PopupReview from "./PopupReview";
 import PopUpTitle from "./PopUpTitle";
 

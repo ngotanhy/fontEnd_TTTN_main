@@ -5,14 +5,14 @@ import { FiShare } from "react-icons/fi";
 import { GrFormPrevious } from "react-icons/gr";
 
 import { useAppDispatch, useAppSelector } from "../../../../Hooks/HooksRedux";
-import { modal } from "../../../../redux/Reducers/openModalReducer";
+import { modal } from "../../../../redux/openModalReducer/OpenModalReducer";
 
 type Props = {};
 
 export default function DetailImageModal({}: Props) {
   const dispatch = useAppDispatch();
-  const { openModal } = useAppSelector((state) => state.openModalReducer);
-  const { roomArray } = useAppSelector((state) => state.roomReducer);
+  const { openModal } = useAppSelector((state) => state.OpenModalReducer);
+  const { arrImage } = useAppSelector((state) => state.RoomReducer);
   return (
     <div
       className={`absolute left-0 w-full bg-slate-50 animate__animated ${
@@ -50,10 +50,10 @@ export default function DetailImageModal({}: Props) {
           </div>
         </div>
         <div className="grid justify-items-center gap-3">
-          {roomArray?.map((item, index) => {
+          {arrImage?.map((item, index) => {
             return (
               <div className="" key={index}>
-                <img src={item.hinhAnh} alt="..." className="object-cover" />
+                <img src={item.img} alt="..." className="object-cover" />
               </div>
             );
           })}

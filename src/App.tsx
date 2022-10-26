@@ -19,7 +19,6 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import DashBoard from "./pages/AdminPages/Dashboard/DashBoard";
 import DetailPages from "./pages/DetailPages/DetailPages";
-import Register from "./pages/Register/Register";
 import HomeTemplate from "./templates/homeTemplate";
 
 type Props = {};
@@ -30,21 +29,17 @@ export default function App({}: Props) {
       <HistoryRouter history={history}>
         {/* <RouterProvider router={router} /> */}
         <Routes>
-          <Route path="/" element={<HomeTemplate />}>
+          <Route path="" element={<HomeTemplate />}>
             <Route index element={<Home />} />
+            <Route path="login" element={<Login />} />
+            <Route path="detail" element={<DetailPages />} />
 
-            <Route path="detailRoom">
-              <Route path=":id" element={<DetailPages />} />
-            </Route>
+            {/* <Route path="detailRoom">
+            <Route path=":id" element={<DetailRoom />} />
+          </Route> */}
 
             <Route path="*" element={<Navigate to="" />} />
           </Route>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-
-            {/* Testing page admin  */}
-            <Route path="/quanly" element={<QuanLiNguoiDung />} />
-            <Route path="/roomAdmin" element={<RoomManagement />} />
           <Route path="/admin/dashboard" element={<DashBoard />}></Route>
         </Routes>
       </HistoryRouter>
