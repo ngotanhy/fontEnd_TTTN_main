@@ -77,10 +77,6 @@ export default function HeaderMenu({}: Props) {
             ></div>
           </div>
         </Dropdown>
-
-        {/* <div>
-                      <FaBars className="text-primary"/>
-                    </div> */}
       </div>
     </>
   );
